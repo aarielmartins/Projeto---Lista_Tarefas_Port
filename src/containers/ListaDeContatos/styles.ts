@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
 
 export const Conteudo = styled.div`
-  max-height: 530px;
+  max-height: 460px;
   overflow-y: scroll;
-  margin: 4px 32px;
+  margin: 12px 32px;
 
   &::-webkit-scrollbar {
     width: 8px;

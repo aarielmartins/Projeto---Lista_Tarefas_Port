@@ -1,16 +1,28 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Botao = styled.button`
-  background: rgb(0, 0, 0, 0.1);
+  background: ${variaveis.gradiente};
   border: none;
-  padding: 6px;
-  border-radius: 10px;
-  margin-right: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 10em;
+  padding: 13px;
+  border-radius: 50px;
+  margin: 10px 30px;
+  color: #fff;
+  cursor: pointer;
+
+  i {
+    font-style: normal;
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+    color: ${variaveis.cinza};
+  }
 `
 
 export const Button = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `

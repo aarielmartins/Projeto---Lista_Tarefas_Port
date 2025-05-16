@@ -5,11 +5,23 @@ const Botoes = () => {
     <>
       <Button>
         <Botao type="button">
-          <i className="bi bi-pen"> Editar</i>
+          <i className="bi bi-plus-circle-dotted">
+            {' '}
+            <b>Adicionar</b>{' '}
+          </i>
+        </Botao>
+        {/* <Botao type="button">
+          <i className="bi bi-pen">
+            {' '}
+            <b>Editar</b>{' '}
+          </i>
         </Botao>
         <Botao type="button">
-          <i className="bi bi-trash2-fill"> Excluir</i>
-        </Botao>
+          <i className="bi bi-trash2-fill">
+            {' '}
+            <b>Excluir</b>
+          </i>
+        </Botao> */}
       </Button>
     </>
   )

@@ -11,4 +11,10 @@ export const Texto = styled.p`
 export const Informacoes = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 8px 0;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0);
+  }
 `
