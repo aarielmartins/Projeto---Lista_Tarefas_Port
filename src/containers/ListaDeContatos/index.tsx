@@ -1,7 +1,6 @@
-import Botoes from '../../components/Botoes'
 import Contato from '../../components/Contato'
 import { Subtitulo } from '../../styles'
-import { Conteudo, Dados } from './styles'
+import { Conteudo, Dados, UmContato } from './styles'
 
 const ListaDeContatos = () => {
   return (
@@ -13,54 +12,11 @@ const ListaDeContatos = () => {
           <Subtitulo>Email</Subtitulo>
         </Dados>
         <ul>
-          <li>
+          <UmContato>
             <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
-          <li>
-            <Contato />
-          </li>
+          </UmContato>
         </ul>
       </Conteudo>
-      <Botoes />
     </>
   )
 }

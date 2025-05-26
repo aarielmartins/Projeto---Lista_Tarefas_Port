@@ -14,10 +14,10 @@ export const Pesquisa = styled.form`
     width: 250px;
     border: none;
     background-color: rgb(255, 255, 255, 0);
+    cursor: pointer;
     color: ${variaveis.cinza};
-
     &:focus {
-      outline: none;
+      outline-color: ${variaveis.rosa};
     }
   }
 
