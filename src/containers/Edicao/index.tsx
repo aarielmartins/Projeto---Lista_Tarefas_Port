@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { RootReducer } from '../../store'
 import InputMask from 'react-input-mask'
 import { Campos, Formulario, Preencher } from './styles'
-import * as enums from '../../utils/enums/TipoContato'
 import { cadastrar, editar } from '../../store/reducers/contatos'
 import { Botao, BotaoSemLink, Button } from '../../styles'
 import { limpaIdentificacao } from '../../store/reducers/identificacao'
+import * as enums from '../../utils/enums/TipoContato'
 
 const Edicao = () => {
   const dispatch = useDispatch()

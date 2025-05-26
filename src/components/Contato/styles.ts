@@ -12,6 +12,7 @@ export const Texto = styled.h3<{ $selecionado: boolean }>`
   justify-content: center;
   align-items: center;
   text-align: center;
+
   padding: 8px 0;
 
   b {
@@ -20,13 +21,16 @@ export const Texto = styled.h3<{ $selecionado: boolean }>`
 `
 
 export const Informacoes = styled.div`
-  display: flex;
-  flex-direction: column;
   padding: 8px 0;
   cursor: pointer;
 
   div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
 
     &:hover {
       filter: brightness(0);

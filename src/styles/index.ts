@@ -23,7 +23,7 @@ export const Fundo = styled.div`
 export const Container = styled.div`
   background-color: #fff;
   max-height: 100%;
-  width: 600px;
+  width: 650px;
   height: 700px;
   border-radius: 5%;
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
@@ -44,6 +44,10 @@ export const Subtitulo = styled.h2`
   text-transform: uppercase;
   text-align: center;
   color: ${variaveis.cinza};
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `
 export const Botao = styled(Link)`
   background: ${variaveis.gradiente};
@@ -59,6 +63,15 @@ export const Botao = styled(Link)`
 
   i {
     font-style: normal;
+    @media (max-width: 600px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    b {
+      margin-left: 5px;
+    }
   }
 
   &:hover {
@@ -71,6 +84,9 @@ export const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 export const BotaoSemLink = styled.button`
   background: ${variaveis.gradiente};
@@ -87,6 +103,15 @@ export const BotaoSemLink = styled.button`
 
   i {
     font-style: normal;
+    @media (max-width: 600px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    b {
+      margin-left: 5px;
+    }
   }
 
   &:hover {

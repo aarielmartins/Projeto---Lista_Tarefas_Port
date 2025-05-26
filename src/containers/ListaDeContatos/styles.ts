@@ -6,6 +6,10 @@ export const Conteudo = styled.div`
   overflow-y: scroll;
   margin: 12px 32px;
 
+  @media (max-width: 600px) {
+    height: 300px;
+  }
+
   &::-webkit-scrollbar {
     width: 8px;
   }

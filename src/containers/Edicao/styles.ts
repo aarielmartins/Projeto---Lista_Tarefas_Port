@@ -19,6 +19,10 @@ export const Formulario = styled.form`
     &:focus {
       outline: none;
     }
+
+    @media (max-width: 600px) {
+      width: 80%;
+    }
   }
 
   .bi {
@@ -34,6 +38,10 @@ export const Preencher = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    height: 350px;
+  }
 `
 
 export const Campos = styled.div`
@@ -41,4 +49,9 @@ export const Campos = styled.div`
   border-radius: 10px;
   margin: 18px 0;
   width: 70%;
+
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: center;
+  }
 `
