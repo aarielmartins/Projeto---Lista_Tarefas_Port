@@ -1,11 +1,12 @@
-import { FormEvent, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { FormEvent, useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Campos, Formulario, Preencher } from './styles'
 import * as enums from '../../utils/enums/TipoContato'
-import { cadastrar } from '../../store/reducers/contatos'
+import { cadastrar, editar } from '../../store/reducers/contatos'
 import { Botao, BotaoSemLink, Button } from '../../styles'
 import { limpaIdentificacao } from '../../store/reducers/identificacao'
+import { RootReducer } from '../../store'
 
 const Edicao = () => {
   const dispatch = useDispatch()
@@ -16,12 +17,36 @@ const Edicao = () => {
   const [email, setEmail] = useState('')
   const [tag, setTag] = useState(enums.TipoContato.AMIGO)
 
+  const idSelecionado = useSelector((state: RootReducer) => state.identificacao)
+  const contatoSelecionado = useSelector((state: RootReducer) =>
+    state.contatos.itens.find((c) => c.id === idSelecionado)
+  )
+
+  useEffect(() => {
+    if (contatoSelecionado) {
+      setNome(contatoSelecionado.nome)
+      setTelefone(contatoSelecionado.telefone)
+      setEmail(contatoSelecionado.email)
+      setTag(contatoSelecionado.tag)
+    }
+  }, [contatoSelecionado])
+
   const cadastrarContato = (evento: FormEvent) => {
     evento.preventDefault()
 
-    const contatoParaAdicionar = { nome, telefone, email, tag }
-
-    dispatch(cadastrar(contatoParaAdicionar))
+    if (idSelecionado) {
+      dispatch(
+        editar({
+          id: idSelecionado,
+          nome,
+          telefone,
+          email,
+          tag
+        })
+      )
+    } else {
+      dispatch(cadastrar({ nome, telefone, email, tag }))
+    }
     navigate('/')
   }
 
