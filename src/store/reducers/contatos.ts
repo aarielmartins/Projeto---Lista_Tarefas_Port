@@ -11,23 +11,23 @@ const initialState: ContatosState = {
   itens: [
     {
       nome: 'Ariel Martins',
-      telefone: '21992531109',
-      email: 'a.martiins.am@gmail.com',
-      tag: enums.TipoContato.AMIGO,
+      telefone: '21999551100',
+      email: 'amartins@gmail.com',
+      tag: enums.TipoContato.TRABALHO,
       id: 1
     },
     {
       nome: 'Augusto Lameira',
-      telefone: '21998562334',
+      telefone: '21999882334',
       email: 'augusto.lameira@hotmail.com',
-      tag: enums.TipoContato.FAMILIA,
+      tag: enums.TipoContato.AMIGO,
       id: 2
     },
     {
       nome: 'Irai Cunha',
-      telefone: '21988569632',
-      email: 'iraifreitas@gmail.com',
-      tag: enums.TipoContato.TRABALHO,
+      telefone: '21988889999',
+      email: 'cunhairai@gmail.com',
+      tag: enums.TipoContato.FAMILIA,
       id: 3
     }
   ]
