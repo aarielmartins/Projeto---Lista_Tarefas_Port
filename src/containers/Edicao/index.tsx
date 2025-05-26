@@ -1,12 +1,13 @@
 import { FormEvent, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { RootReducer } from '../../store'
+import InputMask from 'react-input-mask'
 import { Campos, Formulario, Preencher } from './styles'
 import * as enums from '../../utils/enums/TipoContato'
 import { cadastrar, editar } from '../../store/reducers/contatos'
 import { Botao, BotaoSemLink, Button } from '../../styles'
 import { limpaIdentificacao } from '../../store/reducers/identificacao'
-import { RootReducer } from '../../store'
 
 const Edicao = () => {
   const dispatch = useDispatch()
@@ -70,11 +71,12 @@ const Edicao = () => {
           <label htmlFor="Telefone">
             <i className="bi bi-phone"></i>
           </label>
-          <input
+          <InputMask
             required
             id="Telefone"
-            type="text"
-            placeholder="Telefone"
+            type="tel"
+            mask="(99) 99999-9999"
+            placeholder="(00) 00000-0000"
             value={telefone}
             onChange={(evento) => setTelefone(evento.target.value)}
           />
@@ -86,8 +88,8 @@ const Edicao = () => {
           <input
             required
             id="Email"
-            type="text"
-            placeholder="Email"
+            type="email"
+            placeholder="usuario@dominio.com"
             value={email}
             onChange={(evento) => setEmail(evento.target.value)}
           />
