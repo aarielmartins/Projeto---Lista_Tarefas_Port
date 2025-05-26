@@ -8,11 +8,6 @@ export const Formulario = styled.form`
   margin-top: 10px;
   margin-bottom: 10px;
   color: ${variaveis.cinza};
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   input,
   select {
@@ -31,6 +26,16 @@ export const Formulario = styled.form`
     margin-right: 10px;
   }
 `
+
+export const Preencher = styled.div`
+  height: 460px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 export const Campos = styled.div`
   border: 1px solid ${variaveis.cinza};
   border-radius: 10px;
